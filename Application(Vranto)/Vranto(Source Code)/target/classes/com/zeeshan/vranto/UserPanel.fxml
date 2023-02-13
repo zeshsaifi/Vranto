@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zeeshan.vranto.UserPanelEventHandle">
+   <children>
+      <Pane id="userPanel" fx:id="userMainPanel" prefHeight="600.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="rightPanel" fx:id="leftPanel" prefHeight="600.0" prefWidth="400.0">
+               <children>
+                  <Pane id="profilePanel" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="380.0">
+                     <children>
+                        <ImageView id="profilePhoto" fx:id="userProfilePhoto" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="userNameLabel" layoutX="70.0" layoutY="30.0" prefHeight="25.0" prefWidth="300.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Button id="editProfileButton" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" onAction="#EditProfile" prefHeight="25.0" prefWidth="75.0" text="Edit Profile">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane id="contactPanel" layoutX="10.0" layoutY="90.0" prefHeight="500.0" prefWidth="380.0">
+                     <children>
+                        <Pane id="contactPanelInner" layoutX="10.0" layoutY="10.0" prefHeight="480.0" prefWidth="360.0">
+                           <children>
+                              <ScrollPane fx:id="contactScrollpane" hbarPolicy="NEVER" layoutY="10.0" prefHeight="460.0" prefWidth="360.0" style="-fx-border-color: #ffffff;">
+                                 <content>
+                                    <AnchorPane fx:id="contactPanel" prefHeight="456.0" prefWidth="360.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <Pane fx:id="p1" layoutX="10.0" prefHeight="60.0" prefWidth="340.0">
+                                             <children>
+                                                <ImageView fx:id="up1" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/sendBlue.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="un1" layoutX="70.0" prefHeight="60.0" prefWidth="260.0" text="Username 1">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="p2" layoutX="10.0" layoutY="70.0" prefHeight="60.0" prefWidth="340.0">
+                                             <children>
+                                                <ImageView fx:id="up2" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/sendGrren.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="un2" layoutX="70.0" prefHeight="60.0" prefWidth="260.0" text="Username 2">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="p3" layoutX="10.0" layoutY="140.0" prefHeight="60.0" prefWidth="340.0">
+                                             <children>
+                                                <ImageView fx:id="up3" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/sendRed.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="un3" layoutX="70.0" prefHeight="60.0" prefWidth="260.0" text="Username 3">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </Pane>
+                     </children></Pane>
+               </children></Pane>
+            <Pane id="messagingPanel" fx:id="centerPanel" disable="true" layoutX="400.0" layoutY="10.0" prefHeight="580.0" prefWidth="600.0">
+               <children>
+                  <ImageView id="profilePhoto" fx:id="userMessageProfile" fitHeight="50.0" fitWidth="50.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="userMessageName" contentDisplay="CENTER" layoutX="80.0" layoutY="24.0" prefHeight="40.0" prefWidth="300.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane id="messagingInnerPanel" layoutX="10.0" layoutY="90.0" prefHeight="480.0" prefWidth="580.0">
+                     <children>
+                        <TextField id="messageField" fx:id="messageField" layoutX="10.0" layoutY="430.0" prefHeight="40.0" prefWidth="560.0" promptText="Send message . . . .">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button id="messageSendButton" ellipsisString="" layoutX="510.0" layoutY="430.0" mnemonicParsing="false" onAction="#SendMessageAction" prefHeight="40.0" prefWidth="60.0" />
+                        <ScrollPane id="contactPanelInner" fx:id="messageScrollpane" hbarPolicy="NEVER" layoutX="10.0" layoutY="10.0" prefHeight="410.0" prefWidth="570.0">
+                           <content>
+                              <AnchorPane fx:id="messagePanel" prefHeight="408.0" prefWidth="570.0" style="-fx-background-color: #ffffff;" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+               </children></Pane>
+            <Pane id="searchingPanel" fx:id="rightPanel" layoutX="1000.0" prefHeight="600.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="searchErrorLabel" layoutX="15.0" layoutY="5.0" textFill="RED" visible="false" />
+                  <Button id="logoutButton" layoutX="10.0" layoutY="535.0" mnemonicParsing="false" onAction="#LogoutAction" prefHeight="50.0" prefWidth="180.0" text="LOG OUT">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="searchingField" layoutX="10.0" layoutY="20.0" prefHeight="30.0" prefWidth="150.0" promptText="Search" />
+                  <Button id="searchButton" fx:id="searchButton" layoutX="160.0" layoutY="20.0" mnemonicParsing="false" onAction="#SearchUser" prefHeight="30.0" prefWidth="30.0" />
+                  <Pane id="searchResultPanel" fx:id="SearchResultPanel" layoutX="10.0" layoutY="60.0" prefHeight="150.0" prefWidth="180.0" visible="false">
+                     <children>
+                        <Button id="addButton" layoutX="65.0" layoutY="110.0" mnemonicParsing="false" onAction="#AddUserAction" prefHeight="25.0" prefWidth="50.0" text="ADD" />
+                        <ImageView id="searchProfilePhoto" fx:id="searchUsernameProfile" fitHeight="50.0" fitWidth="50.0" layoutX="65.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="searchUsername" alignment="CENTER" contentDisplay="CENTER" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" />
+                        <Button id="searchButton" layoutX="155.0" minHeight="25.0" mnemonicParsing="false" onAction="#ClearSearchField" prefWidth="25.0" text="X" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="editProfile" disable="true" prefHeight="600.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="editProfileInnerPanel" layoutX="150.0" layoutY="100.0" prefHeight="400.0" prefWidth="900.0">
+               <children>
+                  <Label id="editProfileLabel" alignment="CENTER" layoutX="300.0" layoutY="14.0" prefHeight="50.0" prefWidth="300.0" text="Edit Profile">
+                     <font>
+                        <Font name="Arial Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button id="editProfileButtons" layoutX="851.0" layoutY="361.0" mnemonicParsing="false" onAction="#EditProfileExit" text="Exit" />
+                  <Button id="editProfileButtons" fx:id="editSaveButton" disable="true" layoutX="500.0" layoutY="300.0" mnemonicParsing="false" onAction="#EditProfileSaveAction" prefHeight="30.0" prefWidth="100.0" text="Save Edit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="editPhotoImageView" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="editFirstnameError" layoutX="200.0" layoutY="75.0" prefHeight="17.0" prefWidth="200.0" text="Firstname" />
+                  <TextField id="editProfileFields" fx:id="editFirstname" disable="true" layoutX="200.0" layoutY="95.0" prefHeight="40.0" prefWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label id="editProfileFields" fx:id="editLastnameError" layoutX="500.0" layoutY="75.0" prefHeight="17.0" prefWidth="200.0" text="Lastname" />
+                  <TextField id="editProfileFields" fx:id="editLastname" disable="true" layoutX="500.0" layoutY="95.0" prefHeight="40.0" prefWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button id="editProfileButtons" layoutX="48.0" layoutY="175.0" mnemonicParsing="false" onAction="#ChangeProfilePhotoAction" prefHeight="25.0" prefWidth="100.0" text="Change Photo" />
+                  <Label fx:id="editDobError" layoutX="200.0" layoutY="153.0" prefHeight="17.0" prefWidth="200.0" text="Date of Birth" />
+                  <DatePicker fx:id="editDob" disable="true" layoutX="200.0" layoutY="175.0" prefHeight="40.0" prefWidth="250.0" />
+                  <Label layoutX="500.0" layoutY="153.0" prefHeight="17.0" prefWidth="200.0" text="E-mail (Not Changeable)" />
+                  <TextField id="editProfileFields" fx:id="editEmail" disable="true" editable="false" layoutX="500.0" layoutY="175.0" prefHeight="40.0" prefWidth="250.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button id="editProfileButtons" layoutX="350.0" layoutY="300.0" mnemonicParsing="false" onAction="#EditEnableButton" prefHeight="30.0" prefWidth="100.0" text="Edit Profile">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

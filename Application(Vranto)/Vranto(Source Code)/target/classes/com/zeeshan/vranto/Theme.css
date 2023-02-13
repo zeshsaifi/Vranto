@@ -1,0 +1,235 @@
+
+//Main Page CSS Start
+
+#mainPanel{
+    -fx-background-color:#FFFFFF;
+}
+
+#loginLabel{
+    -fx-text-fill:#000000;
+}
+#loginLabel:hover{
+    -fx-text-fill:#ffc801;
+}
+
+#mainPanelFields{
+    -fx-background-radius:10px;
+}
+
+#loginFieldError{
+    -fx-text-fill:red;
+}
+
+#showPasswordField{
+    -fx-background-color: none;
+    -fx-background-radius: 10px;
+    }
+
+#mainButtons{
+    -fx-background-color:null;
+}
+#mainButtons:hover{
+    -fx-text-fill:green;
+}
+
+#loginButton{
+    -fx-background-color:#ffc801;
+}
+#loginButton:hover{
+    -fx-background-color:green;
+}
+
+//Main Page CSS End
+
+//Forget Panel CSS Start
+
+#forgetInnerPanel{
+    -fx-background-color:#ffffff;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);
+}
+
+#forgetPasswordLabel{
+    -fx-text-fill:#000000;
+}
+
+#forgetPasswordHiddenLabels
+{
+    -fx-text-fill:red;
+}
+
+#forgetPasswordLabel:hover{
+    -fx-text-fill:#ffc801;
+}
+
+#forgetPasswordButtons{
+    -fx-font-weight:bold;
+    -fx-text-fill:#ffffff;
+    -fx-background-color:#ffc801;
+}
+#forgetPasswordButtons:hover{
+    -fx-background-color:green;
+}
+
+//Sign Up Panel css Start
+
+#signupFields{
+    -fx-background-radius:10px;
+    -fx-font-size:18px;
+}
+
+#signupInvalidLabels{
+    -fx-text-fill:red;
+}
+
+#signupLabel:hover{
+    -fx-text-fill:#ffc801;
+}
+
+#signupInnerPanel{
+    -fx-background-color:#ffffff;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);
+}
+
+#signupButtons{
+    -fx-text-fill:#ffffff;
+    -fx-background-color:#ffc801;
+    -fx-font-weight:bold;
+}
+#signupButtons:hover{
+    -fx-background-color:green;
+}
+//Sign-Up CSS End
+
+//UserPanel CSS Start
+
+#userPanel{
+    -fx-background-color:#ffffff;
+}
+
+#contactPanel{
+    -fx-background-color:#ffc801;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#contactPanelInner{
+    -fx-background-color:#ffffff;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#profilePanel{
+    -fx-background-color:#ffc801;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#profilePhoto{
+    -fx-background-color:#ffffff;
+    -fx-border-color:black;
+}
+
+#editProfileButton{
+    -fx-background-color: none;
+}
+#editProfileButton:hover{
+    -fx-text-fill:green;
+}
+
+#editProfileInnerPanel{
+    -fx-background-color:#ffffff;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);
+}
+
+#editProfileLabel:hover{
+    -fx-text-fill:#ffc801;
+}
+
+#editProfileButtons{
+    -fx-font-weight:bold;
+    -fx-text-fill:#ffffff;
+    -fx-background-color:#ffc801;
+}
+#editProfileButtons:hover{
+    -fx-background-color:green;
+}
+
+#editProfileFields{
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+//Messaging Panel Css Start
+
+#messagingPanel{
+    -fx-background-color:#ffc801;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#messagingInnerPanel{
+    -fx-background-color:#ffffff;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#messageField{
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+#messageSendButton{
+    -fx-background-color:none;
+    -fx-graphic: url("images/sendYellow.png");
+    -fx-background-repeat: no-repeat;
+}
+#messageSendButton:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);
+}
+
+//Messaging Panel Css End
+//Left Panel Start
+
+#searchingPanel{
+    -fx-background-color:#ffffff;
+}
+
+#searchButton{
+    -fx-background-color: none;
+}
+#searchButton:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0.0, 0.0);
+}
+
+#searchResultPanel{
+    -fx-background-color:#ffffff;
+}
+
+#addButton{
+    -fx-background-color:lightgreen;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+#addButton:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.2), 10, 0.5, 0.0, 0.0);
+}
+
+#logoutButton{
+    -fx-background-color: white;
+    -fx-text-fill:#000000;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+#logoutButton:hover{
+    //-fx-border-color:red;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.5), 10, 0.5, 0.0, 0.0);
+    -fx-text-fill:red;
+}
+//Left Panel End

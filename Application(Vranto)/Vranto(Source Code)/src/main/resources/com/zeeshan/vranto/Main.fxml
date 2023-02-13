@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zeeshan.vranto.MainEventHandle">
+   <children>
+      <Pane fx:id="mainPanel" layoutX="7.0" layoutY="1.0" prefHeight="600.0" prefWidth="1200.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <ImageView id="mainPageLogo" fx:id="logoMain" fitHeight="200.0" fitWidth="300.0" layoutX="197.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo" />
+               </image>
+            </ImageView>
+            <Label fx:id="titleMain" alignment="CENTER" layoutX="234.0" layoutY="327.0" text="VRANTO" textAlignment="CENTER" textFill="#000000e0">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="slogenMain" alignment="CENTER" layoutX="246.0" layoutY="374.0" text="Stay Connected....." textAlignment="CENTER" />
+            <Label id="loginLabel" fx:id="loginLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="50.0" prefHeight="50.0" prefWidth="300.0" text="LOG IN" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <TextField id="mainPanelFields" fx:id="usernameField" alignment="CENTER" layoutX="700.0" layoutY="200.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter e-mail">
+               <font>
+                  <Font name="Symbol" size="24.0" />
+               </font>
+            </TextField>
+            <PasswordField id="mainPanelFields" fx:id="passwordField" alignment="CENTER" layoutX="700.0" layoutY="300.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter password">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </PasswordField>
+            <Button id="loginButton" fx:id="loginButton" layoutX="747.0" layoutY="400.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="50.0" prefWidth="200.0" text="LOGIN IN" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button id="mainButtons" fx:id="signupLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="626.0" layoutY="500.0" onAction="#signupButton" prefHeight="50.0" prefWidth="450.0" text="Don't have an Account? Click Here." textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <ImageView id="eyeClose" fx:id="showHidePasswordLogo" fitHeight="40.0" fitWidth="40.0" layoutX="1005.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/eyeClose" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="showHidePasswordChekbox" layoutX="1045.0" layoutY="315.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+            <Label id="showPasswordField" fx:id="showPasswordField" disable="true" layoutX="1005.0" layoutY="275.0" prefHeight="30.0" prefWidth="150.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button id="mainButtons" fx:id="forgetPasswordButton" alignment="CENTER" contentDisplay="CENTER" layoutX="880.0" layoutY="350.0" mnemonicParsing="false" onAction="#forgetPassword" prefHeight="25.0" prefWidth="125.0" text="Forget Password ?" />
+            <Label id="loginFieldError" fx:id="usernameError" alignment="CENTER" contentDisplay="CENTER" layoutX="755.0" layoutY="180.0" prefHeight="20.0" prefWidth="193.0" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label id="loginFieldError" fx:id="passwordError" alignment="CENTER" contentDisplay="CENTER" layoutX="754.0" layoutY="280.0" prefHeight="18.0" prefWidth="186.0" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="forgetPasswordPanel" prefHeight="600.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="forgetInnerPanel" layoutX="450.0" layoutY="50.0" prefHeight="500.0" prefWidth="300.0">
+               <children>
+                  <Label id="forgetPasswordLabel" layoutX="19.0" layoutY="14.0" text="Forget Password?">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <TextField id="forgetPanelFields" fx:id="forgetPasswordEmailField" layoutX="50.0" layoutY="100.0" prefHeight="40.0" prefWidth="200.0" promptText="Enter e-mail ID" />
+                  <Button id="forgetPasswordButtons" fx:id="otpSendButton" layoutX="100.0" layoutY="145.0" mnemonicParsing="false" onAction="#otpGenerator" prefWidth="100.0" text="Send OTP" />
+                  <TextField id="forgetPanelFields" fx:id="otpField" layoutX="50.0" layoutY="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Enter OTP" />
+                  <Button id="forgetPasswordButtons" fx:id="otpVerifyButton" layoutX="100.0" layoutY="245.0" mnemonicParsing="false" onAction="#verifyOTP" prefWidth="100.0" text="Verify OTP" />
+                  <PasswordField id="forgetPanelFields" fx:id="newPassword" accessibleRole="PASSWORD_FIELD" editable="false" layoutX="50.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0" promptText="New password" />
+                  <PasswordField id="forgetPanelFields" fx:id="conformPassword" accessibleRole="PASSWORD_FIELD" editable="false" layoutX="50.0" layoutY="365.0" prefHeight="40.0" prefWidth="200.0" promptText="Conform password" />
+                  <Button id="forgetPasswordButtons" fx:id="changePasswordButton" layoutX="90.0" layoutY="410.0" mnemonicParsing="false" onAction="#changePasswordAction" text="Change Password" />
+                  <Button id="forgetPasswordButtons" fx:id="forgetPasswordExitButton" layoutX="232.0" layoutY="456.0" mnemonicParsing="false" onAction="#forgetPasswordExitAction" text="Exit" />
+                  <Label id="forgetPasswordHiddenLabels" fx:id="invalidEmailLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="80.0" prefHeight="20.0" prefWidth="200.0" visible="false" />
+                  <Label id="forgetPasswordHiddenLabels" fx:id="invalidOtpLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="180.0" prefHeight="20.0" prefWidth="200.0" visible="false" />
+                  <Label id="forgetPasswordHiddenLabels" fx:id="invalidNewpasswordLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="280.0" prefHeight="20.0" prefWidth="200.0" visible="false" />
+                  <Label id="forgetPasswordHiddenLabels" fx:id="invalidConformpasswordLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="345.0" prefHeight="20.0" prefWidth="200.0" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="signupPanel" disable="true" prefHeight="600.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="signupInnerPanel" layoutX="200.0" layoutY="100.0" prefHeight="400.0" prefWidth="800.0">
+               <children>
+                  <Label id="signupLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="5.0" prefHeight="50.0" prefWidth="800.0" text="Sign Up">
+                     <font>
+                        <Font name="Arial Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField id="signupFields" fx:id="signupFirstnameField" layoutX="50.0" layoutY="100.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter first name" />
+                  <TextField id="signupFields" fx:id="signupEmailField" layoutX="50.0" layoutY="175.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter e-mail" />
+                  <PasswordField id="signupFields" fx:id="signupPasswordField" editable="false" layoutX="50.0" layoutY="250.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter password" />
+                  <Button id="signupButtons" fx:id="createAccountButton" disable="true" layoutX="325.0" layoutY="325.0" mnemonicParsing="false" onAction="#CreateAccount" prefHeight="40.0" prefWidth="150.0" text="Create Account" />
+                  <TextField id="signupFields" fx:id="signupLastnameField" layoutX="450.0" layoutY="100.0" prefHeight="50.0" prefWidth="300.0" promptText="Enter last name" />
+                  <PasswordField id="signupFields" fx:id="signupConformPasswordField" editable="false" layoutX="450.0" layoutY="250.0" prefHeight="50.0" prefWidth="300.0" promptText="Conform password" />
+                  <Button id="signupButtons" fx:id="signupOtpButton" layoutX="360.0" layoutY="185.0" mnemonicParsing="false" onAction="#SignupOtpSend" prefHeight="30.0" prefWidth="85.0" text="Send OTP" />
+                  <TextField id="signupFields" fx:id="signupOtpField" layoutX="450.0" layoutY="175.0" prefHeight="50.0" prefWidth="200.0" promptText="Enter OTP" />
+                  <Button id="signupButtons" fx:id="signupVerifyOtpButton" layoutX="660.0" layoutY="185.0" mnemonicParsing="false" onAction="#VerifySignupOtp" prefHeight="30.0" prefWidth="80.0" text="Verify OTP" />
+                  <Button id="signupButtons" layoutX="732.0" layoutY="365.0" mnemonicParsing="false" onAction="#signupExitButton" prefHeight="25.0" prefWidth="50.0" text="Exit" />
+                  <Label id="signupInvalidLabels" fx:id="signupFirstnameInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="80.0" prefHeight="20.0" prefWidth="300.0" visible="false" />
+                  <Label id="signupInvalidLabels" fx:id="signupLastnameInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="80.0" prefHeight="20.0" prefWidth="300.0" visible="false" />
+                  <Label id="signupInvalidLabels" fx:id="signupEmailInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="155.0" prefHeight="20.0" prefWidth="300.0" visible="false" />
+                  <Label id="signupInvalidLabels" fx:id="signupOtpInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="155.0" prefHeight="20.0" prefWidth="200.0" visible="false" />
+                  <Label id="signupInvalidLabels" fx:id="signupPasswordInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="230.0" prefHeight="20.0" prefWidth="300.0" visible="false" />
+                  <Label id="signupInvalidLabels" fx:id="signupConformPasswordInvalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="230.0" prefHeight="20.0" prefWidth="300.0" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
